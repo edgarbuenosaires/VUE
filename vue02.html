@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUE 2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script defer src="vue02.js"></script>
+
+
+</head>
+
+<body>
+    <div id="app">
+        {{ message }}
+        <p>Resultado: {{calculoMatematico()}}</p>
+        <p>Valor duplicado de {{a}}: {{duplicar}}</p>
+        <hr>
+        <h3>INTERPOLAR EXPRESIONES</h3>
+        <p> Si bien no es lo más apropiado o recomendado recurrir a muchas de estas opciones,
+            también es posible interpolar algunas expresiones JavaScript dentro del doble
+            moustache. Vue sabrá cómo decodificarlas</p>
+        <p>{{calculoMatematico() + 1}}</p>
+        <p>{{ok ? 'Si' : 'No'}}</p>
+        <hr>
+        <h3>Directiva</h3>
+        <!-- Alternativa al doble moustache-->
+        <p v-text="message"></p>
+        <!-- Enlazar una variable con un atributo html-->
+        <img v-bind:src="portada" v-bind:alt="descripcion">
+        <!-- Directiva V on-->
+        <p><button v-on:click="iniciarSecion">LOGIN</button></p>
+
+        <!--Directivas abreviadas-->
+        <a v-bind:href="url">...</a>
+        <a :href="url">...</a> <!--forma abreviada-->
+
+        <a v-on:click="iniciarSesion">...</a>
+        <a @click="iniciarSesion">...</a> <!--forma abreviada-->
+    </div>
+</body>
+
+</html>

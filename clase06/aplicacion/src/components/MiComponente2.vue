@@ -1,18 +1,20 @@
 <template>
   <div>
     <h2>{{ titulo }}</h2>
-    <p>{{ mensaje }}</p>
+    <p>{{ mensajeParaHijo }}</p>
   </div>
 </template>
 
 <script>
 export default {
+  props: {
+    mensajeParaHijo: String,
+  },
   data() {
     return {
-      titulo: "Componente 2",
-      mensaje: "Este es el contenido del Componente 2"
+      titulo: "Componente DOS",
     };
-  }
+  },
 };
 </script>
 

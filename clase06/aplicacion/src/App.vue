@@ -8,14 +8,14 @@
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+// import HelloWorld from "./components/HelloWorld.vue";
 import MiComponente1 from "./components/MiComponente1.vue";
 // import MiComponente2 from "./components/MiComponente2.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    // HelloWorld,
     MiComponente1,
     // MiComponente2,
   },

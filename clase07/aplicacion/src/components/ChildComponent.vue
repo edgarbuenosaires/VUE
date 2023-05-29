@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Componente Hijo</h2>
+    <h1>Componente Hijo</h1>
     <p>Contador del componente padre recibido: {{ contadorProp }}</p>
     <p>Contador del componente hijo: {{ contadorHijo }}</p>
     <button @click="incrementarContadorHijo">Incrementar contador del hijo</button>

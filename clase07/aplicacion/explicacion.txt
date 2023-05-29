@@ -1,0 +1,12 @@
+
+En este ejemplo, ParentComponent.vue es el componente padre que contiene a
+ChildComponent.vue como componente hijo. El componente hijo recibe el
+contador del componente padre a través de una prop llamada contadorProp.
+      Cuando se hace clic en el botón del componente hijo, se incrementa su
+      propio contador y se emite un evento llamado contadorCambiado junto con el
+      nuevo valor del contador. El componente padre recaptura ese evento y
+      actualiza su propio contador del componente hijo.
+
+En el componente padre, se utiliza la sintaxis :contadorProp="contadorPadre" para pasar el valor del
+contador del padre al hijo, y @contadorCambiado="actualizarContadorHijo" para capturar el evento emitido por
+el hijo y llamar al método actualizarContadorHijo para actualizar el contador del hijo en el padre.

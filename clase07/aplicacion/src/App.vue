@@ -1,19 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
+    <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
+    <parent-component></parent-component>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+//import HelloWorld from "./components/HelloWorld.vue";
+import ParentComponent from "./components/ParentComponent.vue";
+//import ChildComponent from "./components/ChildComponent.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    //HelloWorld,
+    ParentComponent,
+    //ChildComponent,
+  },
+};
 </script>
 
 <style>

@@ -3,17 +3,20 @@
     <img class="logo-small" alt="Vue logo" src="./assets/logo.jpg" />
     <FormularioWeb />
     <!-- Agregar el componente FormularioWeb aquí -->
+     <LoginForm />
   </div>
 </template>
 
 <script>
+import LoginForm from "./components/LoginForm.vue";
 
 import FormularioWeb from "./components/FormularioWeb.vue";
 
 export default {
   name: "App",
-  components: {   
+  components: {
     FormularioWeb,
+    LoginForm,
   },
 };
 </script>

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <hr>
     <form @submit.prevent="login">
       <label for="username">Username</label>
       <input type="text" id="username" v-model="username" />

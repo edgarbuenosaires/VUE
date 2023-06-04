@@ -4,12 +4,14 @@
     <FormularioWeb />
     <!-- Agregar el componente FormularioWeb aquí -->
      <LoginForm />
+     <Formulario2WebVue/>
   </div>
 </template>
 
 <script>
 import LoginForm from "./components/LoginForm.vue";
 import FormularioWeb from "./components/FormularioWeb.vue";
+import Formulario2WebVue from './components/Formulario2Web.vue';
 
 
 export default {
@@ -17,6 +19,7 @@ export default {
   components: {
     FormularioWeb,
     LoginForm,
+    Formulario2WebVue,
   },
 };
 </script>

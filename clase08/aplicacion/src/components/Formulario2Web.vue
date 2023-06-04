@@ -1,7 +1,12 @@
- <div class="container">
 
+
+
+
+
+<template>
+  <div class="container">
     <!-- FORMULARIO -->
-
+    <hr />
     <form>
       <div class="row">
         <div class="col col-12">
@@ -22,7 +27,12 @@
           <!-- INGRESO DE EDAD -->
 
           <label for="inputEdad" class="form-label text-start">Edad</label>
-          <input type="number" class="form-control" id="inputEdad" placeholder="Edad" v-model.number="edad"
+          <input
+            type="number"
+            class="form-control"
+            id="inputEdad"
+            placeholder="Edad"
+            v-model.number="edad"
           />
           <br />
           <p>
@@ -31,7 +41,12 @@
 
           <br />
           <label for="inputEmail" class="form-label text-start">Email</label>
-          <input type="email" class="form-control" id="inputEmail" placeholder="tu@email.com"/>
+          <input
+            type="email"
+            class="form-control"
+            id="inputEmail"
+            placeholder="tu@email.com"
+          />
           <br />
 
           <div class="row">
@@ -40,27 +55,52 @@
               <!-- JavaScript -->
 
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="javascript" id="javascript" v-model="chequeados"/>
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="javascript"
+                  id="javascript"
+                  v-model="chequeados"
+                />
                 <label class="form-check-label" for="checkJS">JavaScript</label>
               </div>
 
               <!-- React -->
 
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="react" id="react" v-model="chequeados"/>
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="react"
+                  id="react"
+                  v-model="chequeados"
+                />
                 <label class="form-check-label" for="checkReact"> React </label>
               </div>
 
               <!-- Angular -->
 
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="angular" id="angular" v-model="chequeados"/>
-                <label class="form-check-label text-start" for="checkNg">Angular</label
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="angular"
+                  id="angular"
+                  v-model="chequeados"
+                />
+                <label class="form-check-label text-start" for="checkNg"
+                  >Angular</label
                 >
               </div>
 
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="vue" id="vue" v-model="chequeados"/>
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="vue"
+                  id="vue"
+                  v-model="chequeados"
+                />
                 <label class="form-check-label" for="checkVue"> Vue </label>
               </div>
             </div>
@@ -74,20 +114,31 @@
           <!-- PAIS -->
 
           <p>Pais</p>
-          <select
-            class="form-select" v-model="pais">
-            <option v-for="pais in listaPaises" v-bind:value="pais.id" v-bind:key="pais.index"> {{pais.pais}} </option>
+          <select class="form-select" v-model="pais">
+            <option
+              v-for="pais in listaPaises"
+              v-bind:value="pais.id"
+              v-bind:key="pais.index"
+            >
+              {{ pais.pais }}
+            </option>
           </select>
 
           <br />
 
           <!-- COMENTARIOS -->
 
-          <label for="areaComentarios" class="form-label text-start">Comentarios</label>
+          <label for="areaComentarios" class="form-label text-start"
+            >Comentarios</label
+          >
 
-          <textarea class="form-control" id="areaComentarios" rows="3" v-model.trim="comentario"></textarea>
+          <textarea
+            class="form-control"
+            id="areaComentarios"
+            rows="3"
+            v-model.trim="comentario"
+          ></textarea>
           <br />
-
 
           <div class="row">
             <h4>Tipo de documento</h4>
@@ -120,4 +171,46 @@
         </div>
       </div>
     </form>
- </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "Formulario2Web",
+  data() {
+    return {
+      nombre: '',
+      edad: 0,
+      chequeados: [],
+      pais: "",
+      listaPaises: [
+        {
+          id: "A",
+          pais: "Argentina",
+        },
+        {
+          id: "B",
+          pais: "Uruguay",
+        },
+        {
+          id: "C",
+          pais: "Perú",
+        },
+        {
+          id: "D",
+          pais: "Colombia",
+        },
+      ],
+    };
+  },
+};
+</script>
+
+<style scoped>
+a {
+  color: #42b983;
+}
+label {
+  margin-left: 0.5em !important;
+}
+</style>

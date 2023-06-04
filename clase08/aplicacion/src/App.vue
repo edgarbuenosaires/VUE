@@ -9,8 +9,8 @@
 
 <script>
 import LoginForm from "./components/LoginForm.vue";
-
 import FormularioWeb from "./components/FormularioWeb.vue";
+
 
 export default {
   name: "App",
